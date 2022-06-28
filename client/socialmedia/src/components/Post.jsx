@@ -85,7 +85,7 @@ const Post = ({ post }) => {
 
     }
     getCommentBox()
-  }, [user._id])
+  }, [post._id])
   
   
 
@@ -213,7 +213,7 @@ const Post = ({ post }) => {
         <button className="sowComment">show comments</button>
         <div className="postFooterSection">
             <textarea className="comments"/>
-            <button>send</button>
+            <button onClick={handleSubmit}>send</button>
           </div>
          
 
