@@ -11,7 +11,7 @@ import { AuthContext } from "../context/AuthContext";
 // import { DeleteIcon } from "@material-ui/icons";
 import {FaTrashAlt, FaWindows} from "react-icons/fa";
 // import Comments from "./AddComment";
-import Comments from "./Comments";
+
 import Comment from "./Comment";
 
 
@@ -219,7 +219,7 @@ const Post = ({ post }) => {
 
           <div >
             
-          {comments.map((comment) => (
+          {commentbox.map((comment) => (
               <div >
                <Comment comment={comment}  />
               

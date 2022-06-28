@@ -1,7 +1,7 @@
 
 import { format } from "timeago.js";
 
-export default function Comment({comment}) {
+const Comment = ({comment})  => {
   return (
     <div >
 
@@ -19,3 +19,5 @@ export default function Comment({comment}) {
     </div>
   );
 }
+
+export default Comment
