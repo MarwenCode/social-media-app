@@ -53,6 +53,10 @@ const Post = ({ post }) => {
     setIsLiked(!isLiked);
   };
 
+
+
+
+
   console.log(user);
 
   const handleDelete = async () => {
@@ -106,23 +110,34 @@ const Post = ({ post }) => {
 
 
   // new comment
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const comment = {
-      sender: user._id,
-      text: newComment,
-      // commentboxId: commentboxId
-    };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const comment = {
+  //     sender: user._id,
+  //     text: newComment,
+  //     // commentboxId: commentboxId
+  //   };
   
   
-    try {
-      const res = await axios.post("/comments", comment);
-      setComments([...comments, res.data]);
-      setNewComment("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  //   try {
+  //     const res = await axios.post("/comments", comment);
+  //     setComments([...comments, res.data]);
+  //     setNewComment("");
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+ 
+
+
+  
+  // const handleSubmit = () => {
+  //   try {
+  //     axios.put("/posts/" + post._id + "/like", { userId: currentUser._id });
+  //   } catch (err) {}
+  //   setCommentBox(isLiked ? like - 1 : like + 1);
+    
+  // };
 
 
 
@@ -213,18 +228,18 @@ const Post = ({ post }) => {
         <button className="sowComment">show comments</button>
         <div className="postFooterSection">
             <textarea className="comments"/>
-            <button onClick={handleSubmit}>send</button>
+            <button >send</button>
           </div>
          
 
           <div >
             
-          {commentbox.map((comment) => (
+          {/* {commentbox.map((comment) => (
               <div >
                <Comment comment={comment}  />
               
               </div>
-            ))}
+            ))} */}
            
 
             

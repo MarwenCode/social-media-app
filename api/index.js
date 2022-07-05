@@ -74,6 +74,7 @@ app.use("/api/messages", messageRoute);
 
 app.listen(8000,() => {
     console.log("back end server is running");
+    console.log("test")
 
 
 })
