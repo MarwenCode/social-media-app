@@ -98,7 +98,7 @@ const Post = ({ post }) => {
   useEffect(() => {
     const getComments = async () => {
       try {
-        const res = await axios.get("/comments/" + commentbox._id);
+        const res = await axios.get("/comments/" + Post._id);
         setComments(res.data);
         console.log(res.data);
       } catch (err) {
@@ -106,73 +106,15 @@ const Post = ({ post }) => {
       }
     };
     getComments();
-  }, [commentbox._id]);
+  }, [Post._id]);
 
-
-  // new comment
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const comment = {
-  //     sender: user._id,
-  //     text: newComment,
-  //     // commentboxId: commentboxId
-  //   };
-  
-  
-  //   try {
-  //     const res = await axios.post("/comments", comment);
-  //     setComments([...comments, res.data]);
-  //     setNewComment("");
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
- 
-
-
-  
-  // const handleSubmit = () => {
-  //   try {
-  //     axios.put("/posts/" + post._id + "/like", { userId: currentUser._id });
-  //   } catch (err) {}
-  //   setCommentBox(isLiked ? like - 1 : like + 1);
+  const addComment = () => {
+    console.log('comment')
     
-  // };
+  }
 
 
-
-
-
-
-
-
-  //   const [showAddTask, SetShowAddTask] = useState(false)
-  //   const [comments, SetComments] = useState([
-  //       {
-  //           id: 1,
-  //           text: "Doctors Appointment",
-
-  //         },
-  //         {
-  //           id: 2,
-  //           text: "Meeting at School",
-
-  //         }
-
-  // ])
-
-  // const addTask = (comment) => {
-  //   const id = Math.random() * 100;
-  //   const newComment = { ...comment, id };
-  //   SetComments([...comments, newComment]);
-  //   console.log(newComment);
-  // };
-
-  // const submitComment = () => {
-  //   console.log("test")
-
-  // }
-
+  
   return (
     <div className="post">
       <div className="postWrapper">
@@ -219,16 +161,20 @@ const Post = ({ post }) => {
           </div>
           <div className="deletePost">
             <FaTrashAlt onClick={handleDelete} />
+         
           </div>
          
 
 
 
         </div>
-        <button className="sowComment">show comments</button>
+        <button className="showComment">show comments</button>
         <div className="postFooterSection">
+    
             <textarea className="comments"/>
-            <button >send</button>
+        
+            <button className="AddComment"    onClick={addComment}>send</button>
+            <span className="postText">{post?.text}</span>
           </div>
          
 

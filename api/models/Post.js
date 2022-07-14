@@ -18,10 +18,21 @@ const PostSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-    commentBox: {
-      // type: Object
-      type: Array,
-      default: [],
+    // commentBox: {
+    //   // type: Object
+    //   type: Array,
+    //   default: [],
+    // },
+   comments: {
+      type: [
+        {
+          commenterId:String,
+          username: String,
+          text: String,
+          timestamp: Number,
+        }
+      ],
+      required: true,
     },
 
 

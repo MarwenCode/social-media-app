@@ -10,13 +10,14 @@ router.post("/", async (req, res) => {
   // const newPost = new Post(req.body);
  
   try {
+    
+    // const newCommentBox = new Commentbox({postId: savedPost._id})
+    // const newComment = new Comment({PostId: Post._id})
+    // console.log(savedPost)
+    // console.log(newCommentBox)
     const newPost = new Post(req.body);
     
     const savedPost = await newPost.save();
-    // const newCommentBox = new Commentbox({postId: savedPost._id})
-    // const newCommentBox = new Commentbox({postId: Post._id})
-    // console.log(savedPost)
-    // console.log(newCommentBox)
 
     res.status(200).json(savedPost);
     // res.status(200).json(newCommentBox);

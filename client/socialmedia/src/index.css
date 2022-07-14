@@ -600,6 +600,25 @@
  
 }
 
+.showComment {
+  background-color: #9ca2b8;
+  border:none;
+  border-radius: 5px;
+  margin-left: 70%;
+}
+.AddComment{
+  margin-left: 40%;
+  border: none;
+  background-color: #9ca2b8;;
+  border-radius: 5px;
+}
+.comments {
+  border-radius: 10px;
+  width: 40%;
+  border: none;
+  background-color: #7d8185;
+}
+
 /* CloseFriend  */
 .sidebarFriend {
   display: flex;
